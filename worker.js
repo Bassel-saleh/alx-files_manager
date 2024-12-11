@@ -45,7 +45,7 @@ fileQueue.process(async (job, done) => {
   }
   const sizes = [500, 250, 100];
   Promise.all(
-    sizes.map((size) => generateThumbnail(file.localPath, size))
+    sizes.map((size) => generateThumbnail(file.localPath, size)),
   ).then(() => {
     done();
   });

@@ -14,7 +14,7 @@ export default class AppController {
     Promise.all([dbClient.nbUsers(), dbClient.nbFiles()]).then(
       ([usersCount, filesCount]) => {
         res.status(200).json({ users: usersCount, files: filesCount });
-      }
+      },
     );
   }
 }
